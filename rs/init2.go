@@ -1,8 +1,0 @@
-// An example init file that can add additional command packages to the build.
-// Rename this file from init2.go.example to init2.go and build to add the
-// example commands to the executable.
-package main
-
-import (
-	_ "github.com/brada954/restshell-example/commands/example"
-)
