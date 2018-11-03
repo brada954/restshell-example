@@ -6,7 +6,3 @@ ALIAS DELETE "get --delete"
 ALIAS LIST "run --list"
 ALIAS DESCRIBE "run --header"
 ALIAS MYIP "get --url \"http://api.ipify.org/?format=json\""
-
-# The following are for tests
-alias BASEAPI "base http://api.ipify.org"
-alias FAKEAPI "base https://jsonplaceholder.typicode.com\"
