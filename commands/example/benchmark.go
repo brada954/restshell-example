@@ -26,10 +26,10 @@ func (cmd *BmCommand) Execute(args []string) error {
 	// Execute commands
 	bm := shell.NewBenchmark(shell.GetCmdIterationValue())
 	for i, _ := range bm.Iterations {
-		bm.StartIteration(i)
+		jc := bm.StartIteration(i)
 		fmt.Fprintln(shell.OutputWriter(), "Iteraction: ", strconv.Itoa(i))
-		bm.EndIteration(i)
-		bm.SetIterationStatus(i, nil)
+		jc.EndIteration(nil)
+		bm.FinalizeIteration(jc)
 	}
 
 	bm.Dump("Example", shell.GetStdOptions(), shell.IsCmdVerboseEnabled())
